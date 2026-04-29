@@ -1,18 +1,23 @@
+@local = http://localhost:3000
+@prod = https://mock-api-anteraja.vercel.app
+
+@host = {{prod}}
+
 ### GET Orders
-GET http://localhost:3000/orders
+GET {{host}}/orders
 
 ### GET Order Detail
-GET http://localhost:3000/orders/1
+GET {{host}}/orders/1
 
 ### GET Cartons
-GET http://localhost:3000/cartons
+GET {{host}}/cartons
 
 ### Assign Carton
-POST http://localhost:3000/orders/carton
+POST {{host}}/orders/carton
 Content-Type: application/json
 
 {
   "order_id": 1,
   "carton_id": "L",
-  "created_by": "agus.stiyo@anteraja.id"
+  "created_by": "agus.stiyo@xyz.id"
 }
